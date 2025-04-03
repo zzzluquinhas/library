@@ -51,7 +51,7 @@ A classe `Client` possui um método `statement`, responsável por gerar o recibo
 
 Reflita sobre os possíveis problemas do método `statement`:
 - Esse método possui muitas responsabilidades?
-- Como adicionar um novo tipo tipo filme?
+- Como adicionar um novo tipo filme?
 - Como adicionar um novo tipo de recibo, por exemplo, HTML, CSV, JSON, etc?
 
 Explore também os testes em [tests.py](https://github.com/andrehora/library/blob/main/tests.py) para entender melhor como o sistema funciona.
@@ -138,14 +138,14 @@ tests.py::test_rent_distinct_books_long_duration PASSED                         
 ### Rode os testes remotamente (via GitHub Actions)
 
 Os testes são executados automaticamente no GitHub Actions sempre que um commit é realizado.
-Portanto, para rodar os testes no GitHub Actions, realize uma alteração qualquer neste aquivo `README.md` e faça o commit da alteração com a seguinte mensagem *Commit 1: Running the tests*.
+Portanto, para rodar os testes no GitHub Actions, realize uma alteração qualquer neste arquivo `README.md` e faça o commit da alteração com a seguinte mensagem: *Commit 1: Running the tests*.
 
 Em seguida, clique na aba `Actions` e veja que os testes foram executados com sucesso no GitHub Actions. 
 Observe as execuções em múltiplos sistemas operacionais e versões da linguagem Python.
 
 # Commit 2: Removing getters @property and renaming attributes
 
-Observe que as classes `Book`, `Rental` e `Client` possuem 5 propriedades `@property` que representa métodos getters.
+Observe que as classes `Book`, `Rental` e `Client` possuem 5 propriedades `@property` que representam métodos getters.
 Não iremos precisar dessas propriedades, portanto, remova todas as 5.
 Em seguida, renomeie os 5 atributos das classes, removendo o underline (_). Por exemplo, mude de `self._book` para `self.book`.
 
@@ -174,7 +174,7 @@ tests.py::test_rent_distinct_books_long_duration PASSED                         
 ```
 
 #### Faça o commit das alterações
-Com os testes passando, faça o commit com a seguinte mensagem *Commit 2: Removing getters @property and renaming attributes*.
+Com os testes passando, faça o commit com a seguinte mensagem: *Commit 2: Removing getters @property and renaming attributes*.
 
 # Commit 3: Extracting method get_charge from Client.statement
 
@@ -188,7 +188,7 @@ def get_charge(self, rental: Rental) -> float:
 O método extraído deve conter o código relativo ao comentário *determine amounts for each line*.
 
 #### Faça o commit das alterações
-Com os testes passando, faça o commit com a seguinte mensagem *Commit 3: Extracting method get_charge from Client.statement*.
+Com os testes passando, faça o commit com a seguinte mensagem: *Commit 3: Extracting method get_charge from Client.statement*.
 
 # Commit 4: Moving method get_charge from Client to Rental
 
@@ -212,7 +212,7 @@ amount = rental.get_charge()
 ```
 
 #### Faça o commit das alterações
-Com os testes passando, faça o commit com a seguinte mensagem *Commit 4: Moving method get_charge from Client to Rental*.
+Com os testes passando, faça o commit com a seguinte mensagem: *Commit 4: Moving method get_charge from Client to Rental*.
 
 # Commit 5: Extracting get_frequent_renter_points from Client.statement to Rental
 
@@ -243,4 +243,4 @@ Encontre e corrija o bug!
 Dica: o bug está no código acima.
 
 #### Faça o commit das alterações
-Com os testes passando, faça o commit com a seguinte mensagem *Commit 5: Extracting get_frequent_renter_points from Client.statement to Rental*.
+Com os testes passando, faça o commit com a seguinte mensagem: *Commit 5: Extracting get_frequent_renter_points from Client.statement to Rental*.
