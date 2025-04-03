@@ -150,7 +150,7 @@ Não iremos precisar dessas propriedades, portanto, remova todas as 5.
 Em seguida, renomeie os 5 atributos das classes, removendo o underline (_). Por exemplo, mude de `self._book` para `self.book`.
 
 **Rode os testes localmente para garantir que o comportamento do sistema não foi alterado.
-Só faça o commit com os testes passadando.
+Só faça o commit com os testes passando.
 Refatoração não deve quebrar os teste.**
 
 Para rodar os testes localmente, basta executar o pytest na linha comando:
