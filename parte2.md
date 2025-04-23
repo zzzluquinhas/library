@@ -45,7 +45,7 @@ class Price:
         pass
 ```
 
-Em seguida, crie três subclasses `RegulaPrice`, `NewReleasePrice` e `ChildrenPrice`.
+Em seguida, crie três subclasses vazias `RegulaPrice`, `NewReleasePrice` e `ChildrenPrice`:
 
 ```python
 class RegulaPrice(Price):
