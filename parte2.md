@@ -27,3 +27,39 @@ Lembre-se de delegar a chamada do método `get_frequent_renter_points` na class 
 
 #### Faça o commit das alterações
 Com os testes passando, faça o commit com a seguinte mensagem: *Commit 7: Moving method get_frequent_renter_points from Rental to Book*.
+
+# Commit 8: Replacing conditional with polymorphism - part 1
+
+Iremos aplicar uma refatoração para isolar a lógica de negócio presentes nos métodos `get_charge` e `get_frequent_renter_points`.
+Neste caso, iremos utilizar herança para que cada cálculo de preço e pontos fique em sua própria classe.
+
+Primeiramente, crie a superclasse `Price` com dois métodos abstratos. Essa classe não de
+
+```python
+class Price:
+
+    def get_charge(self, days_rented: int) -> float:
+        pass
+
+    def get_frequent_renter_points(self, days_rented: int) -> int:
+        pass
+```
+
+Em seguida, crie três subclasses `RegulaPrice`, `NewReleasePrice` e `ChildrenPrice`.
+
+```python
+class RegulaPrice(Price):
+    pass
+
+class NewReleasePrice(Price):
+    pass
+
+class ChildrenPrice(Price):
+    pass
+```
+
+#### Faça o commit das alterações
+Com os testes passando, faça o commit com a seguinte mensagem: *Commit 8: Replacing conditional with polymorphism - part 1*.
+
+
+
