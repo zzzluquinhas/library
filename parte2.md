@@ -33,7 +33,7 @@ Com os testes passando, faça o commit com a seguinte mensagem: *Commit 7: Movin
 Iremos aplicar uma refatoração para isolar a lógica de negócio presentes nos métodos `get_charge` e `get_frequent_renter_points`.
 Neste caso, iremos utilizar herança para que cada cálculo de preço e pontos fique em sua própria classe.
 
-Primeiramente, crie a superclasse `Price` com dois métodos abstratos. Essa classe não de
+Primeiramente, crie a superclasse `Price` com dois métodos abstratos:
 
 ```python
 class Price:
