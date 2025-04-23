@@ -90,7 +90,9 @@ class Book:
         return self.price.get_frequent_renter_points(days_rented)
 ```
 
-Note que os métodos `get_charge` e `get_frequent_renter_points` que continham condicionais (lógica de negócio), agora, delegam seus cálculos para as subclasses com base no tipo de `self.price`, utilizando polimorfismo.
+Tente enteder o código acima.
+
+Note que os métodos `get_charge` e `get_frequent_renter_points` que continham lógica de negócio, agora, delegam seus cálculos para as subclasses, com base no tipo de `self.price`, utilizando polimorfismo.
 Por isso, a refatoração chama-se *Replacing conditional with polymorphism*.
 
 Rode os testes, e veja que eles irão falhar pois ainda não ainda implementamos o código das subclasses `RegulaPrice`, `NewReleasePrice` e `ChildrenPrice`.
