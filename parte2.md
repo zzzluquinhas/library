@@ -3,7 +3,7 @@
 # Library refactoring example - Parte 2
 
 Este exercício é a continuação da refatoração iniciada na parte 1.
-Você deve realizar os 5 commits descritos abaixo e submeter os 5 links dos commits via Moodle.
+Você deve realizar os commits descritos abaixo e submeter os links dos commits via Moodle.
 
 # Commit 6: Moving method get_charge from Rental to Book
 
