@@ -2,7 +2,9 @@
 
 # Library refactoring example - Parte 1
 
-Neste exercício, iremos refatorar um sistema simples para aluguel de livros de uma biblioteca. Este exercício é adaptado do livro Refactoring de Martin Fowler e Kent Beck.
+Neste exercício, iremos refatorar um sistema simples para aluguel de livros de uma biblioteca.
+Este exercício é adaptado do livro Refactoring de Martin Fowler e Kent Beck.
+Você deve realizar os commits descritos abaixo e submeter os links dos commits via Moodle.
 
 ### Overview
 
@@ -72,8 +74,6 @@ def test_rent_regular_book_short_duration():
     
     assert c.statement() == expected_report
 ```
-
-Você deve realizar os commits descritos abaixo e submeter os links dos commits via Moodle.
 
 # Commit 1: Running the tests
 
