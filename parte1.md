@@ -73,7 +73,7 @@ def test_rent_regular_book_short_duration():
     assert c.statement() == expected_report
 ```
 
-Você deve realizar os 5 commits descritos abaixo e submeter os 5 links dos commits via Moodle.
+Você deve realizar os commits descritos abaixo e submeter os links dos commits via Moodle.
 
 # Commit 1: Running the tests
 
