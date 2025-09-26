@@ -22,28 +22,20 @@ class Book:
 
     def __init__(self, title: str, price_code: int):
         self.title = title
-        self.price_code = price_code
+        self.price = self.create_price(price_code)
     
-    def get_charge(self, days_rented: int) -> float:
-        amount = 0
-        if self.price_code == self.REGULAR:
-            amount += 2
-            if days_rented > 2:
-                amount += (days_rented - 2) * 1.5
-        elif self.price_code == self.NEW_RELEASE:
-            amount += days_rented * 3
-        elif self.price_code == self.CHILDREN:
-            amount += 1.5
-            if days_rented > 3:
-                amount += (days_rented - 3) * 1.5
+    def create_price(self, price_code: int):  
+        if price_code == Book.NEW_RELEASE:
+            return NewReleasePrice()
+        elif price_code == Book.CHILDREN:
+            return ChildrenPrice()
+        return RegularPrice()
+    
+    def get_charge(self, days_rented: int):
+        return self.price.get_charge(days_rented)
 
-        return amount
-    
     def get_frequent_renter_points(self, days_rented: int):
-        points = 1
-        if self.price_code == self.NEW_RELEASE and days_rented > 1:
-            points += 1
-        return points
+        return self.price.get_frequent_renter_points(days_rented)
 
 class Rental:
     def __init__(self, book: Book, days_rented: int):
